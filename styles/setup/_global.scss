@@ -1,0 +1,103 @@
+body {
+  font-family: $content_font;
+  font-size: 18px;
+  background-image: url("../img/background-image.png"), url("../img/background-image.png");
+  background-repeat: repeat-y, repeat-y;
+  background-position: left, right;
+  background-size: 5%;
+}
+@media (max-width: 1023px) {
+  body {
+    background: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: $title_font;
+}
+
+p {
+  text-indent: 30px;
+  line-height: 26px;
+}
+
+.blue-text {
+  color: #3ba3ff;
+}
+
+.contact-button {
+  border-radius: 30px 0 0 30px;
+  border: none;
+  padding: 8px 20px;
+  background: linear-gradient(180deg, #30AADF 0%, #2C79BD 100%), #1BA8B5;
+  position: relative;
+  height: 50px;
+  font-family: $title_font;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(180deg, #48C8FF 0%, #2C79BD 100%);
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 52px;
+    height: 50px;
+    top: 0;
+    right: -52px;
+    border-radius: 0 30px 30px 0;
+    background: url("../img/quote-icon.png"), linear-gradient(270deg, #30AADF 0%, #2C79BD 100%);
+    background-position-x: center;
+    background-position-y: 73px;
+  }
+}
+
+.modal-menu {
+  background: transparent;
+  box-shadow: none;
+  width: 100%;
+
+  a.close-modal {
+    top: 25px;
+    right: 25px;
+  }
+
+  .mobile-menu ul {
+    @include reset-list;
+
+    li {
+      padding: 15px;
+
+      a {
+        @include nav-link;
+      }
+    }
+  }
+}
+
+.section-heading {
+  border-top: 3px solid #3ba3ff;
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+
+  h2 {
+    display: inline-block;
+    padding: 0 15px;
+    background-color: #fff;
+    position: relative;
+    color: #3ba3ff;
+    font-family: $title_font;
+    font-size: 36px;
+    top: -25px;
+  }
+}

@@ -1,0 +1,49 @@
+.apartaments {
+  padding-bottom: 40px;
+
+  .centered {
+    text-align: center;
+
+    .contact-button {
+      margin: 20px 0;
+      border-radius: 30px;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 24px;
+    font-family: $title-font;
+    color: #333;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    .card {
+      max-width: 350px;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      color: #4d4d4d;
+
+      &-text {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .apartaments .cards {
+    grid-template-columns: 1fr;
+  }
+}

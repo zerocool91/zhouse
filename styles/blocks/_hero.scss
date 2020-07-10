@@ -1,0 +1,35 @@
+.hero {
+  height:100vh;
+  min-height: 450px;
+  background: url("../img/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+
+  .site-heading {
+    h1 {
+      font-size: 48px;
+    }
+    .read-more-button {
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      color: #fff;
+      font-family: $title-font;
+      margin-left: 70px;
+
+      &::after {
+        content: url("../img/arrow.svg");
+        display: inline-block;
+        vertical-align: middle;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .read-more-button {
+    display: none;
+  }
+}

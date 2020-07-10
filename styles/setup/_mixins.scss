@@ -1,0 +1,15 @@
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@mixin nav-link {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  &:hover {
+    color: #3ba3ff;
+    text-decoration: underline;
+  }
+}

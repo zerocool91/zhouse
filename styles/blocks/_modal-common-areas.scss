@@ -1,0 +1,15 @@
+#modal-common-areas {
+  max-width: 100%;
+  padding: 0;
+
+  .owl-theme {
+    .owl-dots {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+  a.close-modal {
+    z-index: 1;
+  }
+}
